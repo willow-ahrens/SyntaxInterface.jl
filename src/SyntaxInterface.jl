@@ -43,7 +43,7 @@ Returns a term that is in the same closure of nodes as `x`, with `head` as the
 head and `args` as the arguments. By default this will execute `head(args...)`.
 """
 function similarterm(x, head, args)
-    istree(head) ? head(args...) : head
+    head(args...)
 end
 export similarterm
 
