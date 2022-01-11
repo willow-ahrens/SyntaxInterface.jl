@@ -8,9 +8,8 @@
 This package contains simple definitions for common functions that are useful for symbolic expression manipulation. This package is a simplified fork of [TermInterface.jl](https://github.com/JuliaSymbolics/TermInterface.jl)
 
 ## Docs
-You should define the following methods for an expression tree type `T` to  work
-with SyntaxInterface.jl, and therefore with
-[RewriteTools.jl](https://github.com/peterahrens/RewriteTools.jl).
+You should define the following methods for an expression tree type `T` to
+implement SyntaxInterface.jl
 
 #### `istree(x::T)`
 
