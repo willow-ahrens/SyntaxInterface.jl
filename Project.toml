@@ -1,13 +1,13 @@
-name = "TermInterface"
-uuid = "8ea1fca8-c5ef-4a55-8b96-4e9afe9c9a3c"
-authors = ["Shashi Gowda <gowda@mit.edu>", "Alessandro Cheli <sudo-woodo3@protonmail.com>"]
-version = "0.2.3"
-
-[compat]
-julia = "1"
+name = "SyntaxInterface"
+uuid = "b33eeca9-aacb-4496-a840-e75f1646a4fb"
+authors = ["Peter Ahrens"]
+version = "0.1.0"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[compat]
+julia = "1.1"
 
 [targets]
 test = ["Test"]

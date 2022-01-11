@@ -1,4 +1,4 @@
-using TermInterface
+using SyntaxInterface
 using Test
 
 @testset "Expr" begin 
@@ -12,8 +12,5 @@ using Test
     @test operation(ex) == getindex
     @test arguments(ex) == [:arr, :i, :j]
     @test exprhead(ex) == :ref
-    @test ex == similarterm(Expr, :ref, [:arr, :i, :j]; exprhead=:ref)
     @test ex == similarterm(ex, :ref, [:arr, :i, :j])
 end
-
-# TODO add SymbolicUtils tests??
