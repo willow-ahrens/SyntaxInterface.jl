@@ -1,4 +1,4 @@
-# This file contains default definitions for TermInterface methods on Julia
+# This file contains default definitions for SyntaxInterface methods on Julia
 # Builtin Expr type.
 
 istree(x::Type{Expr}) = true
@@ -17,11 +17,11 @@ expr_arguments(e::Expr, _) = e.args
 
 
 function similarterm(x::Expr, head, args)
-    expr_similarterm(head, args, Val{head}())
+    expr_similarterm(head, args, Val{exprhead(x)}())
 end
 
 function similarterm(x::Expr, head, args)
-    expr_similarterm(head, args, Val{head}())
+    expr_similarterm(head, args, Val{exprhead(x)}())
 end
 
 expr_similarterm(head, args, ::Val{:call}) = Expr(:call, head, args...)
