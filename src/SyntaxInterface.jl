@@ -3,8 +3,8 @@ module SyntaxInterface
 """
     istree(x)
 
-Returns `true` if `x` is a term. If true, `operation`, `arguments`
-must also be defined for `x` appropriately.
+Returns `true` if `x` is a term. If true, `operation`, `arguments` must also be
+defined for `x` appropriately.
 """
 istree(x) = false
 export istree
@@ -12,9 +12,10 @@ export istree
 """
     operation(x)
 
-If `x` is a term as defined by `istree(x)`, `operation(x)` returns the
-head of the term if `x` represents a function call, for example, the head
-is the function being called.
+If `x` is a term as defined by `istree(x)`, `operation(x)` returns the head of
+`x`. 
+
+`operation(x)(arguments(x)...)` should produce a node equivalent to `x`.
 """
 function operation end
 export operation
@@ -22,7 +23,10 @@ export operation
 """
     arguments(x)
 
-Get the arguments of `x`, must be defined if `istree(x)` is `true`.
+If `x` is a term as defined by `istree(x)`, `arguments(x)` returns the arguments
+of `x`. 
+
+`operation(x)(arguments(x)...)` should produce a node equivalent to `x`.
 """
 function arguments end
 export arguments
@@ -30,8 +34,8 @@ export arguments
 """
     arity(x)
 
-Returns the number of arguments of `x`. Implicitly defined 
-if `arguments(x)` is defined.
+Returns the number of arguments of `x`. Implicitly defined if `arguments(x)` is
+defined.
 """
 arity(x) = length(arguments(x))
 export arity

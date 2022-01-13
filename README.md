@@ -17,8 +17,8 @@ that `operation(::T)` and `arguments(::T)` methods are defined.
 
 #### `operation(x::T)`
 
-Returns the operation, or head, performed by an expression tree node.
-`operation(x)(arguments(x)...)` should produce a node equivalent to `x`. Called
+Returns the operation, or head, performed by an expression tree node. If `x` represents a function call, for example, the head might represent
+the function being called. Called
 only if `istree(::T)` is true. 
 
 #### `arguments(x::T)`
