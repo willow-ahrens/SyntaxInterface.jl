@@ -39,18 +39,18 @@ expr_operation(e::Expr, ::Val{T}) where {T} = Syntax(T)
 expr_arguments(e::Expr, ::Union{Val{:call}, Val{:macrocall}, Val{:ref}}) = e.args[2:end]
 expr_arguments(e::Expr, _) = e.args
 
-function similarterm(x::Type{Expr}, head::Call, args)
+function similarterm(x::Type{<:Expr}, head::Call, args)
     Expr(:call, head.fn, args...)
 end
 
-function similarterm(x::Type{Expr}, head::Macro, args)
+function similarterm(x::Type{<:Expr}, head::Macro, args)
     Expr(:macrocall, head.fn, args...)
 end
 
-function similarterm(x::Type{Expr}, head::Access, args)
+function similarterm(x::Type{<:Expr}, head::Access, args)
     Expr(:ref, head.arr, args...)
 end
 
-function similarterm(x::Type{Expr}, head::Syntax, args)
+function similarterm(x::Type{<:Expr}, head::Syntax, args)
     Expr(head.head, args...)
 end
