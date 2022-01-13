@@ -32,4 +32,4 @@ In addition, the methods for `Base.hash` and `Base.isequal` should also be imple
 
 #### `similarterm(x::T, f, args)`
 
-Construct a new term with the operation `f` and arguments `args`, the term should be similar to `x` in type. If not specified, the result is computed as `f(args...)`. Defining this method for your term type will reduce performance loss in performing `f(args...)` (esp. the splatting).
+Construct a new term with the operation `f` and arguments `args`, the term should be similar to `x` in type. If not specified, the result is computed as `f(args...)`. This method helps avoid splatting. To define this method for your term type, define `similarterm(::Type{T}, ...)`.
