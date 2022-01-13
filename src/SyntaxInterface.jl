@@ -43,7 +43,7 @@ Returns a term that is in the same closure of nodes with type `T`, with `head`
 as the head and `args` as the arguments. By default this will execute
 `head(args...)`.
 
-Do not overload directly, overload `similarterm(::Type{T}, ...)` instead.
+Do not overload directly, overload `similarterm(::Type{<:T}, ...)` instead.
 """
 similarterm(x, head, args) = similarterm(typeof(x), head, args)
 
