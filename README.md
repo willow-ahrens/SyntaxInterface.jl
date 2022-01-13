@@ -5,7 +5,7 @@
 [![Build Status](https://github.com/peterahrens/SyntaxInterface.jl/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/peterahrens/SyntaxInterface.jl/actions/workflows/ci.yml?query=branch%3Amaster)
 [![Coverage](https://codecov.io/gh/peterahrens/SyntaxInterface.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/peterahrens/SyntaxInterface.jl)
 
-This package contains simple definitions for common functions that are useful for symbolic expression manipulation. This package is a simplified fork of [TermInterface.jl](https://github.com/JuliaSymbolics/TermInterface.jl)
+This package contains definitions for common functions that are useful for symbolic expression manipulation. This package is a simplified fork of [TermInterface.jl](https://github.com/JuliaSymbolics/TermInterface.jl)
 
 ## Docs
 You should define the following methods for an expression tree type `T` to
