@@ -4,7 +4,7 @@ CurrentModule = SyntaxInterface
 
 # SyntaxInterface
 
-Documentation for [SyntaxInterface](https://github.com/peterahrens/SyntaxInterface.jl).
+Documentation for [SyntaxInterface](https://github.com/willow-ahrens/SyntaxInterface.jl).
 
 ```@index
 ```

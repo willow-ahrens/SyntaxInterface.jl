@@ -5,12 +5,12 @@ DocMeta.setdocmeta!(SyntaxInterface, :DocTestSetup, :(using SyntaxInterface); re
 
 makedocs(;
     modules=[SyntaxInterface],
-    authors="Peter Ahrens",
-    repo="https://github.com/peterahrens/SyntaxInterface.jl/blob/{commit}{path}#{line}",
+    authors="Willow Ahrens",
+    repo="https://github.com/willow-ahrens/SyntaxInterface.jl/blob/{commit}{path}#{line}",
     sitename="SyntaxInterface.jl",
     format=Documenter.HTML(;
         prettyurls=get(ENV, "CI", "false") == "true",
-        canonical="https://peterahrens.github.io/SyntaxInterface.jl",
+        canonical="https://willow-ahrens.github.io/SyntaxInterface.jl",
         assets=String[],
     ),
     pages=[
@@ -19,6 +19,6 @@ makedocs(;
 )
 
 deploydocs(;
-    repo="github.com/peterahrens/SyntaxInterface.jl",
+    repo="github.com/willow-ahrens/SyntaxInterface.jl",
     devbranch="main",
 )
