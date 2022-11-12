@@ -8,7 +8,7 @@ symbolic expression manipulation. This package is a simplified fork of
 [TermInterface.jl](https://github.com/JuliaSymbolics/TermInterface.jl)
 
 ## The Interface
-You should define the following methods for an expression tree type `T` to implement SyntaxInterface.jl
+You should define the following methods for an abstract syntax tree to implement SyntaxInterface.jl
 
 #### `istree(x::T)`
 
